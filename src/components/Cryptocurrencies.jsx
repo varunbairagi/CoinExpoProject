@@ -50,11 +50,16 @@ const Cryptocurrencies = ({ simplified }) => {
               >
                 <p>Price: {millify(currency.price)}</p>
                 <p>Market Cap: {millify(currency.marketCap)}</p>
-                {currency.change > 0 ? <div className="green_color_change">
-                <p id="change_color">Daily Change: {currency.change}%</p>
-                </div> : <div className='red_color_change'>
-                <p id="change_color">Daily Change: {currency.change}%</p></div>}
-               
+                {currency.change > 0 ? (
+                  <div className="green_color_change">
+                    <p id="change_color">Daily Change: {currency.change}%</p>
+                  </div>
+) : (
+  <div className="red_color_change">
+    <p id="change_color">Daily Change: {currency.change}%</p>
+  </div>
+)}
+
               </Card>
             </Link>
           </Col>
